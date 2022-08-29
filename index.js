@@ -6,6 +6,8 @@ const PORT = 8000;
 
 app.use(cors());
 
+app.use(express.json());
+
 app.use("/images", express.static("./public/images"));
 
 app.use("/videos", videoRoutes)
