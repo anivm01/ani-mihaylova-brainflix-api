@@ -2,7 +2,8 @@ const express = require("express");
 const app = express();
 const videoRoutes = require("./routes/videoRoutes");
 const cors = require("cors");
-const PORT = 8000;
+require("dotenv").config();
+const {PORT} = process.env
 
 app.use(cors());
 
