@@ -2,7 +2,11 @@ const videosModel = require("../models/videosModel")
 
 function getVideos (req, res) {
     responseArray = videosModel.allVideosAbridged()
+    if (responseArray.length <= 0) {
+        return res.status(404).send("Couldn't find any videos")
+    }
     return res.status(200).json(responseArray)
+
 } 
 
 function getVideoById (req, res) {

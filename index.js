@@ -3,7 +3,7 @@ const app = express();
 const videoRoutes = require("./routes/videosRoutes");
 const cors = require("cors");
 require("dotenv").config();
-const {PORT} = process.env
+const {PORT} = process.env || 8000;
 
 app.use(cors());
 
